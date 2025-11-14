@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export default function resume() {
+export default function Resume() {
   const [file, setFile] = useState(null)
   
   const handleChange = (event) =>{
