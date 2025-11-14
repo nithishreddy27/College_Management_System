@@ -36,7 +36,7 @@ export default function Index({userDetails,leaveLetters}) {
 <div className='flex mb-10'>
 
       {letters?.leaveLetters?.map((letter,index)=>(
-        <div > {!letter.hodApproved && (
+        <div key={index} > {!letter.hodApproved && (
           <div onClick={()=>{router.push(`/profile/student/leave/${user._id}?index=${index}`)}}>
           <div className=' border mx-5 h-[112mm] w-[80mm] relative border-red-700 shadow-lg shadow-red-600'
           
@@ -90,7 +90,7 @@ export default function Index({userDetails,leaveLetters}) {
 <div className='flex mb-10'>
 
       {letters?.leaveLetters?.map((letter,index)=>(
-        <div onClick={()=>{router.push(`/profile/student/leave/${user._id}?index=${index}`)}}> {letter.hodApproved && (
+        <div key={index} onClick={()=>{router.push(`/profile/student/leave/${user._id}?index=${index}`)}}> {letter.hodApproved && (
          
           <div className=' border mx-5 h-[112mm] w-[80mm] relative border-green-700 shadow-lg shadow-green-600'>
             
